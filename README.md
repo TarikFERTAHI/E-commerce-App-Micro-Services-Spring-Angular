@@ -55,6 +55,7 @@
   <ul dir="auto">
 <li>Visiting <code>http://localhost:8500</code> (<code>http://localhost:8500/ui/dc1/services</code>)</li>
 </ul>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/01.1png.png">
 <ul dir="auto">
 <li><strong>Consul</strong> is reactive : means that if it is rebooted, the services detect it and register automatically</li>
 </ul>
