@@ -53,7 +53,20 @@
 </svg>
     </clipboard-copy>
   </div></div>
-  <h4 dir="auto"><a id="user-content-231-gateway-service-dependencies" class="anchor" aria-hidden="true" href="#231-gateway-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.2. <a name="user-content-gatewayservicedependencies"></a>Gateway service Dependencies</h4>
+  
+  <ul dir="auto">
+<li>Config service properties</strong>.</li>
+</ul>
+
+<pre><span class="pl-k">server.port</span>=8888
+<span class="pl-k">spring.application.name</span>=config-service
+<span class="pl-k">spring.cloud.config.server.git.uri</span>==file:///C:/Users/Tarik/Desktop/Tarik/ENSET/S5/youssfi/Spring-Micro-Services-Consul-Config Gateway-Feign-Resilience4J/microservices-consul-config/config-repo // from where getting the config (repo local)</pre>
+
+  
+  <h4 dir="auto"><a id="user-content-231-gateway-service-dependencies" class="anchor" aria-hidden="true" href="#231-gateway-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.2. <a name="user-content-gatewayservicedependencies"></a>Gateway service</h4>
+   <ul dir="auto">
+<li>Dependencies</strong>.</li>
+</ul>
   <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>- Spring Cloud Gateway
 - Consul Discovery : to register in the dicovery service
 - Spring boot Actuator
@@ -71,6 +84,15 @@
 </svg>
     </clipboard-copy>
   </div></div>
+  
+    <ul dir="auto">
+<li>Properties</strong>.</li>
+</ul>
+
+<pre><span class="pl-k">server.port</span>=9999
+<span class="pl-k">spring.application.name</span>=gateway-service
+<span class="pl-k">spring.config.import</span>=optional:configserver:http://localhost:8888</pre>
+  
   <h4 dir="auto"><a id="user-content-311-customer-service-dependencies" class="anchor" aria-hidden="true" href="#311-customer-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.3. <a name="user-content-customerservicedependencies"></a>Customer service Dependencies</h4>
   <pre class="notranslate"><code>- Spring Web
 - Spring Data Jpa
@@ -81,6 +103,16 @@
 - Config client : to find its configuration
 - Spring boot Actuator
 </code></pre>
+
+  <ul dir="auto">
+<li>Customer service properties</strong>.</li>
+</ul>
+
+<pre><span class="pl-k">server.port</span>=8081
+<span class="pl-k">spring.application.name</span>=customer-service
+<span class="pl-k">spring.config.import</span>=optional:configserver:http://localhost:8888</pre>
+
+
   <h4 dir="auto"><a id="user-content-321-inventory-service-dependencies" class="anchor" aria-hidden="true" href="#321-inventory-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.4. <a name="user-content-inventoryservicedependencies"></a>Inventory service Dependencies</h4>
   <pre class="notranslate"><code>- Spring Web
 - Spring Data Jpa
@@ -91,6 +123,16 @@
 - Config client : to find its configuration
 - Spring boot Actuator
 </code></pre>
+
+ <ul dir="auto">
+<li>Inventory service properties</strong>.</li>
+</ul>
+
+<pre><span class="pl-k">server.port</span>=8082
+<span class="pl-k">spring.application.name</span>=inventory-service
+<span class="pl-k">spring.config.import</span>=optional:configserver:http://localhost:8888</pre>
+
+
   <h4 dir="auto"><a id="user-content-331-order-service-dependencies" class="anchor" aria-hidden="true" href="#331-order-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.5. <a name="user-content-orderservicedependencies"></a>Order service Dependencies</h4>
   <pre class="notranslate"><code>- Spring Web
 - Spring Data Jpa
@@ -101,6 +143,14 @@
 - Config client : to find its configuration
 - Spring boot Actuator
 </code></pre>
+
+<ul dir="auto">
+<li>Order service properties</strong>.</li>
+</ul>
+
+<pre><span class="pl-k">server.port</span>=8083
+<span class="pl-k">spring.application.name</span>=order-service
+<span class="pl-k">spring.config.import</span>=optional:configserver:http://localhost:8888</pre>
 <h3 dir="auto"><a id="user-content-34-consul-what-is-happening-" class="anchor" aria-hidden="true" href="#34-consul-what-is-happening-"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.3. <a name="user-content-consulwhatishappening"></a>Consul</h3>
 <ul dir="auto">
 <li>Everything is working fine after running all services<strong>Why ?</strong>.</li>
