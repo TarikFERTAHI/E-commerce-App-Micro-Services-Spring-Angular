@@ -37,7 +37,12 @@
 <li><strong>Consul</strong> is reactive : means that if it is rebooted, the services detect it and register automatically</li>
 </ul>
 <h3 dir="auto"><a id="user-content-22-configuration-service" class="anchor" aria-hidden="true" href="#22-configuration-service"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2. <a name="user-content-configurationservice"></a>Dependencies of Micro-Services</h3>
-<h4 dir="auto"><a id="user-content-221-config-service-dependencies" class="anchor" aria-hidden="true" href="#221-config-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.1. <a name="user-content-configservicedependencies"></a>Config service dependencies</h4>
+<h4 dir="auto"><a id="user-content-221-config-service-dependencies" class="anchor" aria-hidden="true" href="#221-config-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.1. <a name="user-content-configservicedependencies"></a>Config service</h4>
+
+  <ul dir="auto">
+<li>Dependencies</strong>.</li>
+</ul>
+
 <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>- Config Server
 - Spring boot Actuator
 - Consul Discovery
@@ -55,7 +60,7 @@
   </div></div>
   
   <ul dir="auto">
-<li>Config service properties</strong>.</li>
+<li>Properties</strong>.</li>
 </ul>
 
 <pre><span class="pl-k">server.port</span>=8888
@@ -85,7 +90,7 @@
     </clipboard-copy>
   </div></div>
   
-    <ul dir="auto">
+<ul dir="auto">
 <li>Properties</strong>.</li>
 </ul>
 
@@ -93,8 +98,11 @@
 <span class="pl-k">spring.application.name</span>=gateway-service
 <span class="pl-k">spring.config.import</span>=optional:configserver:http://localhost:8888</pre>
   
-  <h4 dir="auto"><a id="user-content-311-customer-service-dependencies" class="anchor" aria-hidden="true" href="#311-customer-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.3. <a name="user-content-customerservicedependencies"></a>Customer service Dependencies</h4>
-  <pre class="notranslate"><code>- Spring Web
+  <h4 dir="auto"><a id="user-content-311-customer-service-dependencies" class="anchor" aria-hidden="true" href="#311-customer-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.3. <a name="user-content-customerservicedependencies"></a>Customer service</h4>
+   <ul dir="auto">
+<li>Dependencies</strong>.</li>
+</ul> 
+<pre class="notranslate"><code>- Spring Web
 - Spring Data Jpa
 - H2 Database
 - Lombok
@@ -105,7 +113,7 @@
 </code></pre>
 
   <ul dir="auto">
-<li>Customer service properties</strong>.</li>
+<li>Properties</strong>.</li>
 </ul>
 
 <pre><span class="pl-k">server.port</span>=8081
@@ -113,8 +121,12 @@
 <span class="pl-k">spring.config.import</span>=optional:configserver:http://localhost:8888</pre>
 
 
-  <h4 dir="auto"><a id="user-content-321-inventory-service-dependencies" class="anchor" aria-hidden="true" href="#321-inventory-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.4. <a name="user-content-inventoryservicedependencies"></a>Inventory service Dependencies</h4>
-  <pre class="notranslate"><code>- Spring Web
+  <h4 dir="auto"><a id="user-content-321-inventory-service-dependencies" class="anchor" aria-hidden="true" href="#321-inventory-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.4. <a name="user-content-inventoryservicedependencies"></a>Inventory service</h4>
+<ul dir="auto">
+<li>Dependencies</strong>.</li>
+</ul>
+
+<pre class="notranslate"><code>- Spring Web
 - Spring Data Jpa
 - H2 Database
 - Lombok
@@ -125,7 +137,7 @@
 </code></pre>
 
  <ul dir="auto">
-<li>Inventory service properties</strong>.</li>
+<li>Properties</strong>.</li>
 </ul>
 
 <pre><span class="pl-k">server.port</span>=8082
@@ -133,8 +145,11 @@
 <span class="pl-k">spring.config.import</span>=optional:configserver:http://localhost:8888</pre>
 
 
-  <h4 dir="auto"><a id="user-content-331-order-service-dependencies" class="anchor" aria-hidden="true" href="#331-order-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.5. <a name="user-content-orderservicedependencies"></a>Order service Dependencies</h4>
-  <pre class="notranslate"><code>- Spring Web
+  <h4 dir="auto"><a id="user-content-331-order-service-dependencies" class="anchor" aria-hidden="true" href="#331-order-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.5. <a name="user-content-orderservicedependencies"></a>Order service</h4>
+<ul dir="auto">
+<li>Dependencies</strong>.</li>
+</ul> 
+<pre class="notranslate"><code>- Spring Web
 - Spring Data Jpa
 - H2 Database
 - Lombok
@@ -145,7 +160,7 @@
 </code></pre>
 
 <ul dir="auto">
-<li>Order service properties</strong>.</li>
+<li>Properties</strong>.</li>
 </ul>
 
 <pre><span class="pl-k">server.port</span>=8083
