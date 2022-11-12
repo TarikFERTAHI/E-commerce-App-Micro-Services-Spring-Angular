@@ -1,4 +1,5 @@
 package ma.tarik.orderservice.entities;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,6 +23,7 @@ public class Order {
     private OrderStatus status;
     private Long customerID;
     @Transient
+    @JsonProperty
     private Customer customer;
     @OneToMany(mappedBy = "order")
     private List<ProductItem> productItems;
