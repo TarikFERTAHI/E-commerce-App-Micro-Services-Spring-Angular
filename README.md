@@ -30,13 +30,16 @@
     </clipboard-copy>
   </div></div>
   <ul dir="auto">
+<li>Command to Run Consul :<code>consul agent -server -bootstrap-expect=1 -data-dir=consul-data -ui -bind=192.168.244.133</code>
+</ul>
+  <ul dir="auto">
 <li>Visiting <code>http://localhost:8500</code> (<code>http://localhost:8500/ui/dc1/services</code>)</li>
 </ul>
 <img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/01.1png.png">
 <ul dir="auto">
 <li><strong>Consul</strong> is reactive : means that if it is rebooted, the services detect it and register automatically</li>
 </ul>
-<h3 dir="auto"><a id="user-content-22-configuration-service" class="anchor" aria-hidden="true" href="#22-configuration-service"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2. <a name="user-content-configurationservice"></a>Dependencies of Micro-Services</h3>
+<h3 dir="auto"><a id="user-content-22-configuration-service" class="anchor" aria-hidden="true" href="#22-configuration-service"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2. <a name="user-content-configurationservice"></a>Configurations and Dependencies of Micro-Services</h3>
 <h4 dir="auto"><a id="user-content-221-config-service-dependencies" class="anchor" aria-hidden="true" href="#221-config-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.1. <a name="user-content-configservicedependencies"></a>Config service</h4>
 
   <ul dir="auto">
@@ -66,6 +69,10 @@
 <pre><span class="pl-k">server.port</span>=8888
 <span class="pl-k">spring.application.name</span>=config-service
 <span class="pl-k">spring.cloud.config.server.git.uri</span>==file:///C:/Users/Tarik/Desktop/Tarik/ENSET/S5/youssfi/Spring-Micro-Services-Consul-Config Gateway-Feign-Resilience4J/microservices-consul-config/config-repo // from where getting the config (repo local)</pre>
+
+
+
+
 
   
   <h4 dir="auto"><a id="user-content-231-gateway-service-dependencies" class="anchor" aria-hidden="true" href="#231-gateway-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.2. <a name="user-content-gatewayservicedependencies"></a>Gateway service</h4>
@@ -166,6 +173,34 @@
 <pre><span class="pl-k">server.port</span>=8083
 <span class="pl-k">spring.application.name</span>=order-service
 <span class="pl-k">spring.config.import</span>=optional:configserver:http://localhost:8888</pre>
+
+
+<h4 dir="auto"><a id="user-content-331-order-service-dependencies" class="anchor" aria-hidden="true" href="#331-order-service-dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.2.6. <a name="user-content-orderservicedependencies"></a>Billing service</h4>
+<ul dir="auto">
+<li>Dependencies</strong>.</li>
+</ul> 
+<pre class="notranslate"><code>- Spring Web
+- Spring Web
+- Consul Discovery
+- Lombok
+- Consul Configuration
+- Spring Boot Actuator
+- Vault Configuration
+</code></pre>
+
+<ul dir="auto">
+<li>Properties</strong>.</li>
+</ul>
+
+<pre><span class="pl-k">server.port</span>=8084
+<span class="pl-k">spring.application.name</span>=billing-service
+<span class="pl-k">spring.config.import</span>=optional:consul:, vault://</pre>
+<!--<span class="pl-k">spring.cloud.vault.scheme</span>=true</pre>
+<span class="pl-k">management.endpoints.web.exposure.include</span>=*</pre>
+<span class="pl-k">spring.cloud.vault.token</span>=hvs.LCYl8Y3goKq2AoaKZIl0ClhV</pre>-->
+
+
+
 <h3 dir="auto"><a id="user-content-34-consul-what-is-happening-" class="anchor" aria-hidden="true" href="#34-consul-what-is-happening-"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.3. <a name="user-content-consulwhatishappening"></a>Consul</h3>
 <ul dir="auto">
 <li>Everything is working fine after running all services<strong>Why ?</strong>.</li>
@@ -206,4 +241,18 @@
 <li>For Testing all Mirco-services are working, visiting : <code>http://localhost:9999/gateway-service/order-service/fullOrder/2</code></li>
 </ul>
 <img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/gatewayfullOrder.png">
-
+<h3 dir="auto"><a id="user-content-34-consul-what-is-happening-" class="anchor" aria-hidden="true" href="#34-consul-what-is-happening-"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2.4. <a name="user-content-consulwhatishappening"></a>Vault</h3>
+<ul dir="auto">
+<li><p dir="auto">Website : <a href="https://www.vaultproject.io/" rel="nofollow">https://www.consul.io/</a></p>
+</ul> 
+<ul dir="auto">
+<li>Command to Run Vault :<code>vault server -dev</code>
+</ul>
+<ul dir="auto">
+<li>Create Key/Value from CMD
+</ul>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/vaultKeyValueCmd.png">
+<ul dir="auto">
+<li>Visiting :<code>http://127.0.0.1:8200/ui/vault/secrets/secret/show/billing-service</code>
+</ul>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/vaultKVInter.png">
