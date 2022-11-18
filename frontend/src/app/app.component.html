@@ -1,23 +1,35 @@
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
+<nav class="navbar navbar-expand-sm navbar-light " style="background: linear-gradient(to left, #707070, #929292, #b5b5b5, #d9d9d9, #ffffff);" >
   <div class="container-fluid">
     <ul class="navbar-nav">
+      <a class="navbar-brand" href="#">
+        <img src="favicon.ico" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+      </a>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link active" routerLink="/products">Products</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/customers">Customers</a>
+        <a class="nav-link active" routerLink="/customers">Customers</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Other Actions</a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Link</a></li>
           <li><a class="dropdown-item" href="#">Another link</a></li>
           <li><a class="dropdown-item" href="#">A third link</a></li>
         </ul>
       </li>
+
     </ul>
+    <form class="d-flex" style="text-align: left" >
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light" type="submit" style="background: linear-gradient(to left, #c4c4c4, #8f8f8f, #5d5d5d, #303030, #000000);">Search</button>
+    </form>
   </div>
 </nav>
+
   <router-outlet>
 
   </router-outlet>
