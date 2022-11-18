@@ -1,8 +1,10 @@
 <div class="container">
+  <br>
+  <br>
   <table class="table" *ngIf="orders">
     <thead>
     <tr>
-      <th>ID</th> <th>Date</th> <th>Status</th> <th>CustomerID</th>
+      <th>ID</th> <th>Date</th> <th>Status</th> <th>CustomerID</th> <th>Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -12,7 +14,7 @@
       <td>{{o.status}}</td>
       <td>{{o.customerID}}</td>
       <td>
-        <button class="btn btn-success" (click)="getOrdersDetails(o)">Orders Details</button>
+        <button class="btn btn-outline-light" style="background: linear-gradient(to left, #c4c4c4, #8f8f8f, #5d5d5d, #303030, #000000);" (click)="getOrdersDetails(o)">Orders Details</button>
       </td>
     </tr>
     </tbody>
