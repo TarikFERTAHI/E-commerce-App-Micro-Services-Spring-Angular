@@ -259,3 +259,11 @@
 </ul>
 <img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/vaultKVInter.png">
 <h1>II. Frontend</h1>
+<h4><li>Products list</li></h4>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/front1.png">
+<h4><li>Customers</li></h4>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/front2.png">
+<h4><li>Customer Orders</li></h4>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/front3.png">
+<h4><li>Orders details</li></h4>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/front4.png">
