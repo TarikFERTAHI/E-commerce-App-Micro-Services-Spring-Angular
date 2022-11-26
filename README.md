@@ -267,3 +267,28 @@
 <img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/front3.png">
 <h4><li>Orders details</li></h4>
 <img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/front4.png">
+<h1>III. Security</h1>
+<ul dir="auto">
+<li>Basic AUth testing with postman</strong>.</li>
+</ul>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/basicAuth.png">
+
+<ul dir="auto">
+<li>Openssl : keypair </strong>.</li>
+</ul>
+<code>openssl genrsa -out keypair.pem 2048</code>
+<ul dir="auto">
+<li>Openssl : public key </strong>.</li>
+</ul>
+<code>openssl rsa -in keypair.pem -pubout -out public.pem</code>
+<ul dir="auto">
+<li>Openssl : private key with pkcs8</strong>.</li>
+</ul>
+<code>openssl pkcs8 -topk8 -inform PEM -nocrypt -in keypair.pem -out private.pem</code>
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keys.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/accessToken.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/tokenInfos.png">
+
