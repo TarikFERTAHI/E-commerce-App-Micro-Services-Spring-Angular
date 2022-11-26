@@ -286,6 +286,7 @@
 </ul>
 <code>openssl pkcs8 -topk8 -inform PEM -nocrypt -in keypair.pem -out private.pem</code>
 <br>
+<br>
 <img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keys.png">
 <br>
 <img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/accessToken.png">
