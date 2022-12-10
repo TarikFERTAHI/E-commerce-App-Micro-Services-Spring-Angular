@@ -2,6 +2,7 @@ package ma.tarik.customerservice.web;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,7 @@ public class CustomerConfigTestController {
     private String y;
 
     @GetMapping("/params")
+    @PreAuthorize("hasAuthority('USER')")
     public Map<String, String> params() {
         return Map.of("p1", p1, "p2", p2, "x", x, "y", y);
     }
