@@ -297,3 +297,38 @@
 <br>
 <img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/tokenInfos.png">
 
+<h2>Security with keyclock</h2>
+<ul dir="auto">
+<li>Command to Run keyclock :<code>kc.bat start-dev</code>
+</ul>
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock01.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock02.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock03.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock04.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock05.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock06.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock7.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock08.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock09.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock010.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock11.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock12.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock13.png">
+<br>
+<img src="https://github.com/TarikFERTAHI/E-commerce-App-Micro-Services-Spring-Angular/blob/main/pics/keyclock14.png">
+
+
+
